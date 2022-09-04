@@ -1,29 +1,29 @@
 # this is section for variables 
 
 # region 
+
 variable "region" {
-  description = "us-east-1"
+  default = "us-east-2"
 }
 
 # environment
 
 variable "environment" {
-
-    description = "Josh"
-  
+  default = "Development"
 }
 
 # vpc_cidr 
+
 variable "vpc_cidr" {
-    description = "10.0.0.0/16"
-  
-}
-# public_subnet_1_cidr
-variable "public_subnet_1_cidr" {
-    description = "10.0.1.0/24"
-  
+  description = "VPC cidr block"
 }
 
+# public_subnet_1_cidr
+
+variable "public_subnet_1_cidr" {
+  description = "Public Subnet 1 cidr block"
+}
+  
 # public_subnet_2_cidr
 
 # public_subnet_3_cidr
