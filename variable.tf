@@ -2,25 +2,25 @@
 
 # region 
 variable "region" {
-  description = "this is my region us east 1"
+  description = "us-east-1"
 }
 
 # environment
 
 variable "environment" {
 
-    description = " this is my environment name"
+    description = "Josh"
   
 }
 
 # vpc_cidr 
 variable "vpc_cidr" {
-    description = "vpc cidr block"
+    description = "10.0.0.0/16"
   
 }
 # public_subnet_1_cidr
 variable "public_subnet_1_cidr" {
-    description = "cidr block for public subnet 1"
+    description = "10.0.1.0/24"
   
 }
 
