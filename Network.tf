@@ -1,11 +1,23 @@
 # network section 
 
-# "aws_vpc" "development-vpc" 
-
+# "aws_vpc" "development-vpc"
+resource "aws_vpc" "development-vpc" {
+  cidr_block           = "${var.vpc_cidr}"
+  enable_dns_hostnames = true
+  tags = {
+    Name = "${environment}-VPC"
+  }
+}
 
 # "aws_subnet" "public-subnet-1"
-
-
+resource "aws_subnet" "public-subnet-1" {
+  cidr_block        = "${var.public_subnet_1_cidr}"
+  vpc_id            = "${aws_vpc.development-vpc.id}"
+  availability_zone = "${var.region}a"
+  tags = {
+    Name = "${environment}-VPC-public-Subnet-1"
+  }
+}
 # "aws_subnet" "public-subnet-2"
 
 
